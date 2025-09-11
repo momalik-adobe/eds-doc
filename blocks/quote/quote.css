@@ -1,0 +1,58 @@
+.quote {
+  margin: 24px 0;
+}
+
+.quote .quote-figure {
+  position: relative;
+  margin: 0;
+  padding: 20px 24px 20px 32px;
+  background: #f3f3f3;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.quote .quote-figure::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: #5eb5a6;
+}
+
+.quote blockquote {
+  margin: 0 0 12px 0;
+  padding: 0 0 0 24px;
+  font-style: italic;
+  color: #555;
+  position: relative;
+}
+
+.quote blockquote::before {
+  content: '\201C';
+  position: absolute;
+  left: 0;
+  top: -6px;
+  color: #5eb5a6;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.quote figcaption {
+  margin: 0;
+  padding-left: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+@media (width >= 900px) {
+  .quote .quote-figure {
+    padding: 24px 28px 24px 40px;
+  }
+
+  .quote blockquote::before {
+    font-size: 36px;
+  }
+}
+
+
