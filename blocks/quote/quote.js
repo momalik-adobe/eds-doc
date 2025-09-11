@@ -12,8 +12,8 @@ export default function decorate(block) {
     }
   });
 
-  const quoteText = config['quotetext'] || config['quote-text'] || '';
-  const quoteAuthor = config['quoteauthor'] || config['quote-author'] || '';
+  const quoteText = config.quotetext || config['quote-text'] || '';
+  const quoteAuthor = config.quoteauthor || config['quote-author'] || '';
 
   const wrapper = document.createElement('figure');
   wrapper.className = 'quote-figure';
@@ -31,5 +31,3 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(wrapper);
 }
-
-
