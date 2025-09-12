@@ -17,7 +17,7 @@
   top: 0;
   bottom: 0;
   width: 6px;
-  background: #5eb5a6;
+  background: var(--quote-accent-color, #5eb5a6);
 }
 
 .quote blockquote {
@@ -33,7 +33,7 @@
   position: absolute;
   left: 0;
   top: -6px;
-  color: #5eb5a6;
+  color: var(--quote-accent-color, #5eb5a6);
   font-size: 32px;
   line-height: 1;
 }

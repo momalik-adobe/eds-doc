@@ -14,6 +14,10 @@ export default function decorate(block) {
 
   const quoteText = config.quotetext || config['quote-text'] || '';
   const quoteAuthor = config.quoteauthor || config['quote-author'] || '';
+  const accentColorRaw = config.accent || config['accent-color'] || config.background || '';
+  const accentColor = accentColorRaw
+    ? (accentColorRaw.startsWith('#') ? accentColorRaw : `#${accentColorRaw}`)
+    : '#5eb5a6';
 
   const wrapper = document.createElement('figure');
   wrapper.className = 'quote-figure';
@@ -30,4 +34,7 @@ export default function decorate(block) {
 
   block.textContent = '';
   block.append(wrapper);
+
+  // expose configurable accent color
+  block.style.setProperty('--quote-accent-color', accentColor);
 }
